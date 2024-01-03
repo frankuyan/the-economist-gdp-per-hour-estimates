@@ -1,5 +1,6 @@
 
 # Stage 1 - load data and packages: ------------------------------
+install.packages('WDI')
 library(WDI)
 library(tidyverse)
 use_cache <- T
@@ -101,7 +102,7 @@ wdi_dat$gdp_ppp_over_k_hours_worked_c <- 1000*wdi_dat$gdp_ppp_c/wdi_dat$total_ho
 
 
 # Export to file
-write_csv(wdi_dat, 'output-data/gdp_over_hours_worked.csv')
+write_csv(wdi_dat, 'NEWoutput-data/gdp_over_hours_worked.csv')
 
 
 
